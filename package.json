@@ -1,0 +1,15 @@
+{
+  "name": "playwright-api-testing",
+  "version": "1.0.0",
+  "description": "Sample Playwright API testing project",
+  "scripts": {
+    "test": "npx playwright test",
+    "test:api": "npx playwright test --grep @api",
+    "test:headed": "npx playwright test --headed",
+    "test:debug": "npx playwright test --debug",
+    "report": "npx playwright show-report"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.40.0"
+  }
+}
