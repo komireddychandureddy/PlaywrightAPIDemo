@@ -1,3 +1,4 @@
+
 import { defineConfig, devices } from '@playwright/test';
 
 export default defineConfig({
@@ -9,7 +10,17 @@ export default defineConfig({
   reporter: [
     ['html'],
     ['json', { outputFile: 'test-results.json' }],
-    ['junit', { outputFile: 'results.xml' }]
+    ['junit', { outputFile: 'results.xml' }],
+    ['allure-playwright', { 
+      outputFolder: 'allure-results',
+      suiteTitle: true,
+      environmentInfo: {
+        'API_URL': 'https://jsonplaceholder.typicode.com',
+        'Test Environment': process.env.NODE_ENV || 'development',
+        'Browser': 'API Testing',
+        'OS': process.platform
+      }
+    }]
   ],
   use: {
     baseURL: 'https://jsonplaceholder.typicode.com',

@@ -1,4 +1,6 @@
+
 import { test as base } from '@playwright/test';
+import { allure } from 'allure-playwright';
 
 export const test = base.extend({
   // Custom fixture for API context with authentication
@@ -37,3 +39,4 @@ export const test = base.extend({
 });
 
 export { expect } from '@playwright/test';
+export { allure };

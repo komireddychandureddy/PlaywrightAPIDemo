@@ -1,3 +1,4 @@
+
 # Playwright API Testing Project
 
 This project demonstrates comprehensive API testing using Playwright with various patterns and best practices.
